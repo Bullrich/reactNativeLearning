@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
-const Card = (props) => {
+const Card = (props: any) => {
   return (
     <View style={styles.containerStyle}>
       {props.children}
