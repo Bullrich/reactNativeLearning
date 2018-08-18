@@ -1,12 +1,11 @@
 import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import {Provider} from 'react-redux';
-import {createStore, applyMiddleware} from 'redux';
+import {applyMiddleware, createStore} from 'redux';
 import reducers from './src/reducers'
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
-import LoginForm from './src/components/LoginForm';
-import {Header} from "./src/components/common";
+import Navigation from './src/Router';
 
 export default class App extends Component {
   componentWillMount() {
@@ -27,10 +26,7 @@ export default class App extends Component {
 
     return (
       <Provider store={store}>
-        <View>
-          <Header headerText={"Manager"}/>
-          <LoginForm/>
-        </View>
+          <Navigation/>
       </Provider>
     );
   }
