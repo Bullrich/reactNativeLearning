@@ -14,9 +14,7 @@ class LoginForm extends Component {
   }
 
   onButtonPress() {
-    console.log(this.props);
     const {email, password} = this.props;
-    console.log(email + ' : ' + password);
     this.props.loginUser(email, password);
   }
 
